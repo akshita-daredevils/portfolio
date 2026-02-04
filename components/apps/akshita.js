@@ -120,10 +120,10 @@ function About() {
             <div className="mt-4 md:mt-8 text-lg md:text-2xl text-center px-1">
                 <div>Hello, I'm <span className="font-bold">Akshita Rawat</span></div>
                 <div className="font-normal">
-                    <span className="text-ub-orange font-bold">Founding Developer</span> | 
-                    <span className="text-blue-400"> CS Undergraduate</span>
+                    <span className="text-ub-orange font-bold">Full Stack Developer</span> | 
+                    <span className="text-blue-400"> Web3 & Cloud</span>
                 </div>
-                <div className="text-sm text-gray-400 mt-1">Mobile, AI/ML, and cloud-focused engineer</div>
+                <div className="text-sm text-gray-400 mt-1">Jaipur, Rajasthan, India</div>
             </div>
             <div className="mt-4 relative md:my-8 pt-px bg-white w-32 md:w-48">
                 <div className="bg-white absolute rounded-full p-0.5 md:p-1 top-0 transform -translate-y-1/2 left-0"></div>
@@ -131,16 +131,16 @@ function About() {
             </div>
             <ul className="mt-4 leading-tight tracking-tight text-sm md:text-base w-5/6 md:w-3/4 emoji-list">
                 <li className="list-pc">
-                    Founding Developer and <span className="font-medium">Computer Science undergraduate</span> shipping production mobile apps end-to-end—from architecture to deployment.
+                    Results-driven <span className="font-medium">Full Stack Developer</span> with production experience across React, Next.js, Node.js, and cloud-native services.
                 </li>
                 <li className="mt-3 list-building">
-                    Integrate <span className="font-medium">LLM-based features</span> into real-world products and build scalable full-stack systems.
+                    Strong command of <span className="font-medium">distributed and decentralized systems</span>, delivering performant, scalable architectures.
                 </li>
                 <li className="mt-3 list-time">
-                    Comfortable owning the stack: Flutter, native iOS/Android, cloud (Azure, Firebase, GCP), CI/CD, and analytics.
+                    Comfortable owning delivery end-to-end: CI/CD, Docker/Kubernetes, AWS, performance tuning, and observability.
                 </li>
                 <li className="mt-3 list-star">
-                    Enjoy mentoring and collaborating—previously a Microsoft Learn Student Ambassador delivering workshops and guidance.
+                    National hackathon winner with a track record of shipping <span className="font-medium">high-impact, production-grade</span> features quickly.
                 </li>
             </ul>
         </>
@@ -155,22 +155,11 @@ function Education() {
             <div className="mt-6">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                     <div>
-                        <div className="text-lg md:text-xl font-semibold">GLA University</div>
-                        <div className="text-sm md:text-base text-gray-300">Bachelor of Technology (B.Tech) – Computer Science</div>
-                        <div className="text-sm md:text-base text-gray-300">Artificial Intelligence & Machine Learning</div>
+                        <div className="text-lg md:text-xl font-semibold">Banasthali Vidyapith</div>
+                        <div className="text-sm md:text-base text-gray-300">B.Tech, Electronics and Communication</div>
+                        <div className="text-sm md:text-base text-gray-300">Focus on distributed systems, DSA, and systems design</div>
                     </div>
-                    <div className="text-sm md:text-base text-gray-400">August 2024 - September 2028 (Expected)</div>
-                </div>
-            </div>
-
-            <div className="mt-6">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-                    <div>
-                        <div className="text-lg md:text-xl font-semibold">Babu Daudayal Saraswati Vidhya Mandir</div>
-                        <div className="text-sm md:text-base text-gray-300">Class 12th – Science Stream</div>
-                        <div className="text-sm md:text-base text-gray-300">All India Senior School Certificate Examination</div>
-                    </div>
-                    <div className="text-sm md:text-base text-gray-400">Completed 2024</div>
+                    <div className="text-sm md:text-base text-gray-400">July 2023 - May 2027 · Jaipur, India</div>
                 </div>
             </div>
         </div>
@@ -185,42 +174,73 @@ function Skills() {
             <div className="mt-6">
                 <div className="text-lg md:text-xl font-semibold mb-3 text-ub-orange">Languages</div>
                 <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Python</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Dart</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">JavaScript</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">SQL</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">JavaScript (ES6+)</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">TypeScript</span>
                     <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">C++</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Python</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Go (Golang)</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Solidity</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">SQL</span>
                 </div>
             </div>
 
             <div className="mt-6">
-                <div className="text-lg md:text-xl font-semibold mb-3 text-ub-orange">Mobile Development</div>
+                <div className="text-lg md:text-xl font-semibold mb-3 text-ub-orange">Frontend</div>
                 <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Flutter</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">iOS (Swift)</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Android (Kotlin/Java)</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">React.js</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Next.js (SSR)</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Redux</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Tailwind CSS</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Material UI</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">WebRTC</span>
                 </div>
             </div>
 
             <div className="mt-6">
-                <div className="text-lg md:text-xl font-semibold mb-3 text-ub-orange">AI / ML</div>
+                <div className="text-lg md:text-xl font-semibold mb-3 text-ub-orange">Backend</div>
                 <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Large Language Models (LLMs)</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">NLP</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Supervised Learning</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Prompt Engineering</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Node.js</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Express</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">PostgreSQL</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">MongoDB</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Redis</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">REST APIs</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">WebSockets</span>
                 </div>
             </div>
 
             <div className="mt-6">
-                <div className="text-lg md:text-xl font-semibold mb-3 text-ub-orange">Cloud & Tools</div>
+                <div className="text-lg md:text-xl font-semibold mb-3 text-ub-orange">DevOps / Cloud</div>
                 <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Microsoft Azure</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Firebase</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Google Cloud Platform</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Git</span>
-                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">GitHub</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Docker</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Kubernetes</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">AWS (EC2, S3)</span>
                     <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">CI/CD</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Nginx</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Firebase</span>
+                </div>
+            </div>
+
+            <div className="mt-6">
+                <div className="text-lg md:text-xl font-semibold mb-3 text-ub-orange">Web3</div>
+                <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Ethereum</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Smart Contracts</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Hardhat</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Ethers.js</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">IPFS</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Decentralized Identity</span>
+                </div>
+            </div>
+
+            <div className="mt-6">
+                <div className="text-lg md:text-xl font-semibold mb-3 text-ub-orange">Tools & Foundations</div>
+                <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Git/GitHub</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Postman</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Figma</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Linux/Bash</span>
+                    <span className="px-3 py-1 bg-ub-orange bg-opacity-20 text-sm rounded-full">Data Structures & Algorithms</span>
                 </div>
             </div>
         </div>
@@ -231,23 +251,57 @@ function Projects() {
     return (
         <div className="w-full px-1 md:px-4 py-2">
             <div className="text-xl md:text-2xl font-bold">Key Projects</div>
-            <p className="text-gray-400 text-sm mt-1 mb-4">More work on <a href="https://rentits.in/projects" target="_blank" rel="noopener noreferrer" className="text-ub-orange hover:underline">rentits.in/projects</a></p>
+            <p className="text-gray-400 text-sm mt-1 mb-4">Selected builds that highlight distributed systems, AI, and Web3.</p>
 
             <div className="mt-4 space-y-6">
                 <div className="border border-gray-700 rounded-lg p-4 hover:border-ub-orange transition-colors duration-300">
                     <div className="flex justify-between items-start">
                         <div>
-                            <div className="text-lg md:text-xl font-semibold">Financial Options Strategies Tool</div>
-                            <div className="text-sm text-gray-400">Python • Pandas • NumPy</div>
+                            <div className="text-lg md:text-xl font-semibold">NexusStream — Distributed Live Video Engine</div>
+                            <div className="text-sm text-gray-400">Go • WebRTC • Docker • Redis</div>
                         </div>
                     </div>
                     <p className="mt-2 text-sm md:text-base">
-                        CLI tool to backtest options trading strategies on historical market data with statistical analysis for risk and performance comparisons.
+                        Architected a scalable live streaming backend supporting 10k+ concurrent connections with sub-second latency using custom signaling and adaptive bitrate streaming. Deployed microservices on AWS EC2 with Dockerized auto-scaling.
                     </p>
                     <div className="mt-3 flex flex-wrap gap-2">
-                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">Backtesting</span>
-                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">Data Analysis</span>
-                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">Automation</span>
+                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">Low Latency</span>
+                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">Distributed Systems</span>
+                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">Streaming</span>
+                    </div>
+                </div>
+
+                <div className="border border-gray-700 rounded-lg p-4 hover:border-ub-orange transition-colors duration-300">
+                    <div className="flex justify-between items-start">
+                        <div>
+                            <div className="text-lg md:text-xl font-semibold">CodeSynthetix — AI-Powered Code Auditor</div>
+                            <div className="text-sm text-gray-400">Python • TensorFlow • Next.js</div>
+                        </div>
+                    </div>
+                    <p className="mt-2 text-sm md:text-base">
+                        Built a SaaS platform leveraging LLMs to automate security vulnerability detection in pull requests, reducing manual code review time by 60% while detecting exploits with 94% accuracy.
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">LLM</span>
+                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">Security</span>
+                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">SaaS</span>
+                    </div>
+                </div>
+
+                <div className="border border-gray-700 rounded-lg p-4 hover:border-ub-orange transition-colors duration-300">
+                    <div className="flex justify-between items-start">
+                        <div>
+                            <div className="text-lg md:text-xl font-semibold">VaultChain — Decentralized Identity System</div>
+                            <div className="text-sm text-gray-400">Solidity • Ethereum • Web3.js</div>
+                        </div>
+                    </div>
+                    <p className="mt-2 text-sm md:text-base">
+                        Developed a self-sovereign identity protocol enabling credential management without centralized authorities. Wrote gas-optimized smart contracts with comprehensive tests in Hardhat.
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">Web3</span>
+                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">Security</span>
+                        <span className="px-2 py-0.5 bg-gray-800 rounded-full text-xs text-gray-300">Identity</span>
                     </div>
                 </div>
             </div>
@@ -265,7 +319,15 @@ function Resume() {
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
                         <div>
                             <h2 className="text-2xl font-bold text-white">Akshita Rawat</h2>
-                            <p className="text-gray-300">Founding Developer | Mobile & AI Engineer</p>
+                            <p className="text-gray-300">Full Stack Developer | Web3 & Cloud</p>
+                            <p className="text-sm text-gray-400">Jaipur, Rajasthan, India</p>
+                            <p className="text-sm text-gray-400 space-x-2 mt-1">
+                                <span><a className="hover:text-ub-orange" href="mailto:rawatakshita0987@gmail.com">rawatakshita0987@gmail.com</a></span>
+                                <span>|</span>
+                                <span><a className="hover:text-ub-orange" href="https://github.com/LittleCodr" target="_blank" rel="noreferrer">github.com/LittleCodr</a></span>
+                                <span>|</span>
+                                <span><a className="hover:text-ub-orange" href="https://linkedin.com/in/akshita-rawat-b64359284" target="_blank" rel="noreferrer">LinkedIn</a></span>
+                            </p>
                         </div>
                         <a 
                             href="/files/resume.pdf" 
@@ -281,88 +343,71 @@ function Resume() {
                     </div>
 
                     <div className="border-t border-gray-700 pt-6 mt-6">
+                        <h3 className="text-xl font-semibold mb-4 text-ub-orange">Professional Summary</h3>
+                        <p className="text-gray-300 text-sm md:text-base">
+                            Results-driven Full Stack Developer with a strong command of modern web technologies and decentralized systems. Proven ability to build production-grade applications using React, Node.js, and cloud infrastructure. Winner of national hackathons focused on high-performance architecture. Seeking an internship to leverage deep technical skills and deliver immediate value to engineering teams.
+                        </p>
+                    </div>
+
+                    <div className="border-t border-gray-700 pt-6 mt-6">
                         <h3 className="text-xl font-semibold mb-4 text-ub-orange">Professional Experience</h3>
-                        
+
                         <div className="mb-6">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <h4 className="text-lg font-semibold">Founding Developer</h4>
-                                    <p className="text-gray-300">Rentits • Mathura, India</p>
+                                    <h4 className="text-lg font-semibold">Web Development Intern</h4>
+                                    <p className="text-gray-300">International Hacker Zone • Remote</p>
                                 </div>
-                                <span className="text-gray-400 text-sm">Nov 2025 – Present</span>
+                                <span className="text-gray-400 text-sm">Aug 2025 - Sep 2025</span>
                             </div>
                             <ul className="mt-2 text-gray-300 list-disc list-inside space-y-1">
-                                <li>Designed and implemented the end-to-end architecture of a sharing-economy platform from MVP to production.</li>
-                                <li>Built AI-driven recommendation features to improve discovery and user engagement.</li>
-                                <li>Developed and maintained cross-platform mobile apps in Flutter with a focus on performance and scalability.</li>
+                                <li>Built high-fidelity, responsive UI components in React.js, improving UI speed by 30%.</li>
+                                <li>Integrated complex REST APIs for real-time data and implemented Redux state management.</li>
+                                <li>Collaborated remotely to deliver production-quality features on tight timelines.</li>
                             </ul>
                         </div>
 
                         <div className="mb-6">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <h4 className="text-lg font-semibold">Freelance Mobile Engineer (Android & iOS)</h4>
-                                    <p className="text-gray-300">Remote</p>
+                                    <h4 className="text-lg font-semibold">SDE Intern</h4>
+                                    <p className="text-gray-300">Rentits • Bangalore (Hybrid)</p>
                                 </div>
-                                <span className="text-gray-400 text-sm">Jun 2020 – Nov 2025</span>
+                                <span className="text-gray-400 text-sm">May 2025 - Jul 2025</span>
                             </div>
                             <ul className="mt-2 text-gray-300 list-disc list-inside space-y-1">
-                                <li>Built and shipped native iOS and Android applications across diverse device constraints and OS versions.</li>
-                                <li>Integrated REST APIs, authentication flows, and backend services while meeting store guidelines.</li>
-                                <li>Implemented offline-first architectures, background processing, and data caching for reliability.</li>
-                            </ul>
-                        </div>
-
-                        <div className="mb-6">
-                            <div className="flex justify-between items-start">
-                                <div>
-                                    <h4 className="text-lg font-semibold">Microsoft Learn Student Ambassador (MLSA)</h4>
-                                    <p className="text-gray-300">Microsoft • Remote</p>
-                                </div>
-                                <span className="text-gray-400 text-sm">Apr 2025 – Nov 2025</span>
-                            </div>
-                            <ul className="mt-2 text-gray-300 list-disc list-inside space-y-1">
-                                <li>Conducted technical workshops on Azure fundamentals and cloud-native development.</li>
-                                <li>Mentored students on deployment, system design basics, and software engineering best practices.</li>
+                                <li>Engineered the core inventory management microservice in Node.js and Docker handling 500+ daily transactions.</li>
+                                <li>Optimized PostgreSQL queries, cutting data retrieval latency by 40% on high-traffic endpoints.</li>
+                                <li>Implemented a real-time chat feature with Socket.io and Redis alongside product stakeholders.</li>
                             </ul>
                         </div>
 
                         <div className="mb-2">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <h4 className="text-lg font-semibold">Open Source Contributor</h4>
-                                    <p className="text-gray-300">Hacktoberfest • Remote</p>
+                                    <h4 className="text-lg font-semibold">Campus Ambassador</h4>
+                                    <p className="text-gray-300">IIT Guwahati</p>
                                 </div>
-                                <span className="text-gray-400 text-sm">Oct 2025</span>
+                                <span className="text-gray-400 text-sm">Mar 2025 - Sep 2025</span>
                             </div>
                             <ul className="mt-2 text-gray-300 list-disc list-inside space-y-1">
-                                <li>Contributed bug fixes and performance improvements to open-source repositories.</li>
-                                <li>Collaborated with maintainers through reviews and pull requests in distributed teams.</li>
+                                <li>Orchestrated promotional campaigns for technical summits, increasing participation by 40%.</li>
+                                <li>Coordinated outreach to student communities and streamlined event communication.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div className="border-t border-gray-700 pt-6 mt-6">
                         <h3 className="text-xl font-semibold mb-4 text-ub-orange">Education</h3>
-                        <div className="mb-4">
-                            <div className="flex justify-between items-start">
-                                <div>
-                                    <h4 className="text-lg font-semibold">GLA University, Mathura</h4>
-                                    <p className="text-gray-300">Bachelor of Technology (B.Tech) – Computer Science</p>
-                                </div>
-                                <span className="text-gray-400 text-sm">Aug 2024 – Sep 2028 (Expected)</span>
-                            </div>
-                            <p className="mt-1 text-gray-300 text-sm">Focus: Artificial Intelligence & Machine Learning</p>
-                        </div>
-
                         <div className="mb-2">
                             <div className="flex justify-between items-start">
                                 <div>
-                                    <h4 className="text-lg font-semibold">Babu Daudayal Saraswati Vidhya Mandir, Mathura</h4>
-                                    <p className="text-gray-300">Class 12th – Science Stream</p>
+                                    <h4 className="text-lg font-semibold">Banasthali Vidyapith</h4>
+                                    <p className="text-gray-300">B.Tech, Electronics and Communication</p>
                                 </div>
-                                <span className="text-gray-400 text-sm">Completed 2024</span>
+                                <span className="text-gray-400 text-sm">Jul 2023 - May 2027</span>
                             </div>
+                            <p className="mt-1 text-gray-300 text-sm">Jaipur, India</p>
                         </div>
                     </div>
 
@@ -370,56 +415,58 @@ function Resume() {
                         <h3 className="text-xl font-semibold mb-4 text-ub-orange">Skills</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
-                                <h4 className="font-medium text-gray-200 mb-2">Languages</h4>
+                                <h4 className="font-medium text-gray-200 mb-2">Languages & Backend</h4>
                                 <div className="flex flex-wrap gap-2">
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Python</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Dart</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">JavaScript</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">SQL</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">C++</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">JavaScript/TypeScript</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Node.js</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Express</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">PostgreSQL</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">MongoDB</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Redis</span>
                                 </div>
                             </div>
                             <div>
-                                <h4 className="font-medium text-gray-200 mb-2">Mobile Development</h4>
+                                <h4 className="font-medium text-gray-200 mb-2">Frontend</h4>
                                 <div className="flex flex-wrap gap-2">
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Flutter</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">iOS (Swift)</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Android (Kotlin/Java)</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">React.js</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Next.js (SSR)</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Redux</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Tailwind CSS</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Material UI</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">WebRTC</span>
                                 </div>
                             </div>
                             <div>
-                                <h4 className="font-medium text-gray-200 mb-2">AI / ML</h4>
+                                <h4 className="font-medium text-gray-200 mb-2">DevOps / Cloud</h4>
                                 <div className="flex flex-wrap gap-2">
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Large Language Models (LLMs)</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">NLP</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Supervised Learning</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Prompt Engineering</span>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 className="font-medium text-gray-200 mb-2">Cloud & Tools</h4>
-                                <div className="flex flex-wrap gap-2">
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Microsoft Azure</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Firebase</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Google Cloud Platform</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Git</span>
-                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">GitHub</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Docker</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Kubernetes</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">AWS (EC2, S3)</span>
                                     <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">CI/CD</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Nginx</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Firebase</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 className="font-medium text-gray-200 mb-2">Web3 & Tools</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Solidity</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Hardhat</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Ethers.js</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">IPFS</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Git/GitHub</span>
+                                    <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">Postman</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="border-t border-gray-700 pt-6 mt-6">
-                        <h3 className="text-xl font-semibold mb-4 text-ub-orange">Certifications</h3>
-                        <ul className="text-gray-300 list-disc list-inside space-y-2">
-                            <li>Microsoft Certified: Azure Fundamentals</li>
-                            <li>Supervised Machine Learning (Regression and Classification)</li>
-                            <li>Google Cloud: The Arcade Certification Zone (Oct 2024)</li>
+                        <h3 className="text-xl font-semibold mb-4 text-ub-orange">Achievements & Certifications</h3>
+                        <ul className="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Winner, TriWizardathon-1.0 (National Hackathon) — Best Distributed Systems implementation.</li>
+                            <li>Top 15 Finalist, Hackindia 25 — Selected from top 1% of 1000+ teams.</li>
+                            <li>Scholar, Shefi'14 — Blockchain & Web3 cohort scholarship.</li>
+                            <li>Core Member, GeeksForGeeks (GFG) Student Chapter.</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-    )
-}

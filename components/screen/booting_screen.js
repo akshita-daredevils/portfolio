@@ -13,8 +13,8 @@ function BootingScreen(props) {
             </div>
             <img width="200px" height="100px" className="md:w-1/5 w-1/2" src="./themes/Yaru/status/ubuntu_white_hex.svg" alt="Ubuntu Name" />
             <div className="text-white mb-4">
-                <a className="underline" href="https://rentits.in" rel="noreferrer noopener" target="_blank">website</a>
-                <a className="underline" href="https://rentits.in" rel="noreferrer noopener" target="_blank">portfolio</a>
+                <a className="underline" href="https://heyakshita.in" rel="noreferrer noopener" target="_blank">website</a>
+                <a className="underline" href="https://heyakshita.in" rel="noreferrer noopener" target="_blank">portfolio</a>
                 <span className="font-bold mx-1">|</span>
                 <a href="https://github.com/LittleCodr" rel="noreferrer noopener" target="_blank" className="underline">github</a>
                 <a href="https://github.com/LittleCodr/portfolio" rel="noreferrer noopener" target="_blank" className="underline">github</a>

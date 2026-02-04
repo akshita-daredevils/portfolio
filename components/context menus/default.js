@@ -11,13 +11,13 @@ function DefaultMenu(props) {
                 <span className="ml-5">❗</span> <span className="ml-2">Report bugs</span>
             </a>
             <Devider />
-            <a rel="noreferrer noopener" href="https://rentits.in" target="_blank" className="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5">
-                <span className="ml-5">🙋‍♂️</span> <span className="ml-2">Visit <strong>rentits.in</strong></span>
+            <a rel="noreferrer noopener" href="https://heyakshita.in" target="_blank" className="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5">
+                <span className="ml-5">🙋‍♂️</span> <span className="ml-2">Visit <strong>heyakshita.in</strong></span>
             </a>
             <a rel="noreferrer noopener" href="https://github.com/LittleCodr" target="_blank" className="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5">
                 <span className="ml-5">🤝</span> <span className="ml-2">Follow on <strong>Github</strong></span>
             </a>
-            <a rel="noreferrer noopener" href="mailto:littlecodr@gmail.com" target="_blank" className="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5">
+            <a rel="noreferrer noopener" href="mailto:rawatakshita0987@gmail.com" target="_blank" className="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5">
                 <span className="ml-5">📥</span> <span className="ml-2">Contact Me</span>
             </a>
             <Devider />

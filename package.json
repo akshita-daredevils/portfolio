@@ -3,12 +3,12 @@
   "name": "akshita-rawat-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://rentits.in/",
+  "homepage": "https://heyakshita.in/",
   "repository": {
     "type": "git",
     "url": "https://github.com/LittleCodr/portfolio.git"
   },
-  "author": "Akshita Rawat <littlecodr@gmail.com> (https://rentits.in)",
+  "author": "Akshita Rawat <rawatakshita0987@gmail.com> (https://heyakshita.in)",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",

@@ -2,16 +2,16 @@
 
 const config = {
   owner: 'Akshita Rawat',
-  portfolioUrl: 'https://rentits.in',
-  email: 'littlecodr@gmail.com',
+  portfolioUrl: 'https://github.com/LittleCodr',
+  email: 'rawatakshita0987@gmail.com',
   authorizedDomains: [
     'heyakshita.in',
-    'www.rentits.in',
+    'www.heyakshita.in',
     '127.0.0.1',
     'localhost'
   ],
-  watermarkText: '© Akshita Rawat | rentits.in',
-  consoleMessage: `%c🔒 Portfolio Protection Active 🔒\n\nThis portfolio belongs to Akshita Rawat (Rentits).\nPlease respect the owner's work and do not copy without permission.\n\nContact: littlecodr@gmail.com\n`,
+  watermarkText: '© Akshita Rawat | github.com/LittleCodr',
+  consoleMessage: `%c🔒 Portfolio Protection Active 🔒\n\nThis portfolio belongs to Akshita Rawat.\nPlease respect the owner's work and do not copy without permission.\n\nContact: rawatakshita0987@gmail.com\n`,
   consoleStyle: 'color: #4CAF50; font-weight: bold; font-size: 12px;'
 };
 
@@ -138,7 +138,7 @@ export function initPortfolioProtection() {
   }
   
   // Add meta tag to prevent indexing if not on an authorized domain
-  if (!isAuthorizedDomain() && window.location.hostname !== 'rentits.in') {
+  if (!isAuthorizedDomain() && window.location.hostname !== 'heyakshita.in') {
     const meta = document.createElement('meta');
     meta.content = 'noindex, nofollow';
     document.head.appendChild(meta);
@@ -151,7 +151,7 @@ export function initPortfolioProtection() {
     warningText.textContent = '⚠️ This is an unauthorized copy of Akshita Rawat\'s portfolio. ';
     
     const link = document.createElement('a');
-    link.href = 'https://rentits.in';
+    link.href = 'https://heyakshita.in';
     link.textContent = 'Visit the official portfolio here';
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
