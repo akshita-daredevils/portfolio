@@ -5,7 +5,7 @@ const config = {
   portfolioUrl: 'https://rentits.in',
   email: 'littlecodr@gmail.com',
   authorizedDomains: [
-    'rentits.in',
+    'heyakshita.in',
     'www.rentits.in',
     '127.0.0.1',
     'localhost'
