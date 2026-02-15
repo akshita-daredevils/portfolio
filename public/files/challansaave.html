@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ChallanSave</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+.page{display:none}
+
+/* HERO sas*/
+.hero{
+height:220px;
+background:url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:34px;
+font-weight:bold;
+text-shadow:0 4px 10px rgba(0,0,0,0.6);
+}
+
+/* Welcome */
+#welcome{
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  margin:0;
+  padding:0;
+}
+
+.welcome-card{
+  background:rgba(0,0,0,.65);
+  padding:45px;
+  border-radius:22px;
+  max-width:520px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.6);
+  margin:auto;
+}
+
+.welcome-wrapper{
+  width:100%;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+.welcome-card h1{font-size:55px;margin-bottom:10px}
+.welcome-card p{font-size:18px;opacity:0.9}
+
+/* Auth */
+#auth{min-height:100vh;background:#f5f5f5}
+.card{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2)
+}
+.center{display:flex;justify-content:center;align-items:center;padding:50px}
+
+/* Dashboard */
+#dashboard{min-height:100vh;background:#f4f4f4}
+.dashboard-wrap{display:flex;gap:30px;justify-content:center;padding:50px;flex-wrap:wrap}
+.choice{text-align:center;width:300px}
+
+/* Seller */
+#sell{min-height:100vh;background:#f4f4f4}
+input,select{
+width:100%;
+padding:12px;
+margin:8px 0;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:15px;
+outline:none;
+}
+input:focus,select:focus{border:1px solid orange;box-shadow:0 0 5px rgba(255,165,0,.6)}
+
+/* Buttons */
+button{
+background:black;
+color:white;
+border:none;
+padding:13px 22px;
+border-radius:12px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+button:hover{opacity:.9;transform:scale(1.02)}
+.backBtn{
+background:#444;
+margin-top:20px;
+}
+
+/* Buyer Page */
+#buyer{min-height:100vh;background:#f4f4f4}
+.swipe-container{
+width:360px;
+max-width:90%;
+height:480px;
+position:relative;
+margin-top:25px;
+}
+
+.carCard{
+width:100%;
+height:100%;
+background:white;
+border-radius:20px;
+box-shadow:0 12px 30px rgba(0,0,0,0.25);
+overflow:hidden;
+position:absolute;
+top:0;
+left:0;
+transition:0.3s ease;
+cursor:grab;
+}
+
+.car-img{
+height:60%;
+background-size:cover;
+background-position:center;
+}
+
+.car-details{
+padding:18px;
+}
+.car-details h3{
+font-size:22px;
+margin-bottom:6px;
+}
+.tag{
+display:inline-block;
+background:orange;
+color:black;
+padding:5px 10px;
+border-radius:12px;
+font-size:13px;
+font-weight:bold;
+margin-bottom:8px;
+}
+.info{
+margin-top:6px;
+color:#333;
+font-size:14px;
+}
+
+.swipe-actions{
+display:flex;
+gap:20px;
+margin-top:18px;
+justify-content:center;
+}
+.actionBtn{
+width:140px;
+font-size:16px;
+padding:12px;
+border-radius:15px;
+}
+.likeBtn{background:#ff2d55;}
+.ignoreBtn{background:#111;}
+
+.likeList{
+background:white;
+padding:18px;
+border-radius:15px;
+margin-top:25px;
+width:500px;
+max-width:90%;
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+.likeList h3{margin-bottom:10px}
+.liked-item{
+padding:10px;
+border-bottom:1px solid #ddd;
+font-size:14px;
+cursor:pointer;
+transition:0.2s;
+}
+.liked-item:hover{
+background:#fff6e6;
+transform:scale(1.01);
+}
+.liked-item:last-child{border-bottom:none}
+
+/* NEW FILTER UI */
+.filterBox{
+background:white;
+padding:18px;
+border-radius:18px;
+width:500px;
+max-width:90%;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+margin-top:20px;
+}
+.filterRow{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+.filterRow select{
+flex:1;
+min-width:180px;
+}
+.filterBtn{
+background:orange;
+color:black;
+font-weight:bold;
+width:100%;
+margin-top:10px;
+}
+.filterBtn:hover{
+opacity:0.95;
+transform:scale(1.01);
+}
+
+/* ==========================
+   NEW: DETAILS MODAL
+========================== */
+.modalOverlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+padding:20px;
+}
+
+.modalBox{
+background:white;
+width:750px;
+max-width:95%;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
+animation:pop 0.25s ease;
+}
+
+@keyframes pop{
+from{transform:scale(0.8);opacity:0}
+to{transform:scale(1);opacity:1}
+}
+
+.modalHeader{
+background:black;
+color:white;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.modalHeader h2{
+font-size:20px;
+}
+
+.closeBtn{
+background:red;
+border:none;
+color:white;
+padding:8px 14px;
+border-radius:10px;
+cursor:pointer;
+font-size:14px;
+}
+
+.modalBody{
+padding:20px;
+max-height:75vh;
+overflow:auto;
+}
+
+.modalGrid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:10px;
+}
+
+.modalCard{
+background:#f8f8f8;
+padding:14px;
+border-radius:14px;
+border:1px solid #ddd;
+font-size:14px;
+}
+
+.modalCard b{
+color:#111;
+}
+
+.modalImage{
+width:100%;
+height:240px;
+border-radius:15px;
+background-size:cover;
+background-position:center;
+margin-bottom:15px;
+border:2px solid #eee;
+}
+
+.docTag{
+display:inline-block;
+background:orange;
+color:black;
+padding:5px 10px;
+border-radius:12px;
+font-size:12px;
+font-weight:bold;
+margin:5px 6px 0 0;
+}
+
+.footerLine{
+margin-top:18px;
+padding:12px;
+border-radius:12px;
+background:#111;
+color:white;
+text-align:center;
+font-weight:bold;
+font-size:14px;
+}
+
+.uploadBox{
+margin-top:12px;
+padding:14px;
+border-radius:12px;
+border:1px dashed #aaa;
+background:#fff;
+}
+
+.uploadBox input{
+margin-top:10px;
+}
+
+@media(max-width:600px){
+.hero{font-size:24px;text-align:center;padding:10px}
+.modalGrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<!-- WELCOME -->
+<div id="welcome" class="page">
+  <div class="welcome-wrapper">
+    <div class="welcome-card">
+      <h1>ChallanSave</h1>
+      <p>Connecting Dealers. Growing Business 🚗</p><br>
+      <button onclick="showPage('auth')">Get Started</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- LOGIN -->
+<div id="auth" class="page">
+  <div class="hero">Welcome to ChallanSave 🚗</div>
+  <div class="center">
+    <div class="card" style="width:380px;">
+      <h2 style="margin-bottom:15px;">Login / Signup</h2>
+      <input placeholder="Email / Username">
+      <input placeholder="Password" type="password">
+      <button style="width:100%;margin-top:10px;" onclick="showPage('dashboard')">Continue</button>
+      <button class="backBtn" style="width:100%;" onclick="showPage('welcome')">⬅ Back</button>
+    </div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="page">
+  <div class="hero">Buy or Sell Cars Easily</div>
+
+  <div class="dashboard-wrap">
+    <div class="card choice">
+      <h2>I want to Buy</h2><br>
+      <button onclick="showPage('buyer')">Browse Cars</button>
+    </div>
+
+    <div class="card choice">
+      <h2>I want to Sell</h2><br>
+      <button onclick="showPage('sell')">Sell Car</button>
+    </div>
+  </div>
+
+  <div class="center">
+    <button class="backBtn" onclick="showPage('auth')">⬅ Back</button>
+  </div>
+</div>
+
+<!-- SELLER FORM -->
+<div id="sell" class="page">
+  <div class="hero">Sell Your Car Fast</div>
+
+  <div class="center">
+    <div class="card" style="width:600px">
+      <h2>Seller Lead Form</h2>
+
+      <input placeholder="Car Brand">
+      <input placeholder="Model">
+      <input id="price" type="number" placeholder="Expected Price">
+      
+      <select id="state">
+        <option>Select State</option>
+      </select>
+
+      <label style="font-weight:bold;">Upload 8–15 Car Images</label>
+      <input type="file" id="images" multiple>
+      <p id="imgCount">0 images selected</p>
+
+      <button style="width:100%;margin-top:10px;" onclick="submitLead()">Submit Lead</button>
+      <button class="backBtn" style="width:100%;" onclick="showPage('dashboard')">⬅ Back</button>
+    </div>
+  </div>
+</div>
+
+<!-- BUYER SWIPE PAGE -->
+<div id="buyer" class="page">
+  <div class="hero">Browse Cars</div>
+
+  <div class="center" style="flex-direction:column;">
+    <h2 style="margin-bottom:8px;">Swipe / Click to Like ❤️ or Ignore ❌</h2>
+
+    <!-- FILTER UI -->
+    <div class="filterBox">
+      <h3 style="margin-bottom:10px;">🔍 Filter Cars</h3>
+      <div class="filterRow">
+        <select id="companySelect">
+          <option value="">Select Company</option>
+        </select>
+
+        <select id="modelSelect">
+          <option value="">Select Model</option>
+        </select>
+      </div>
+
+      <button class="filterBtn" onclick="applyFilter()">Apply Filter</button>
+      <button class="backBtn" style="width:100%;margin-top:10px;" onclick="resetFilter()">Reset</button>
+    </div>
+
+    <div class="swipe-container" id="swipeContainer"></div>
+
+    <!-- LAPTOP BUTTONS -->
+    <div class="swipe-actions">
+      <button class="actionBtn ignoreBtn" onclick="ignoreCar()">⬅ Ignore</button>
+      <button class="actionBtn likeBtn" onclick="likeCar()">❤️ Like</button>
+    </div>
+
+    <!-- LIKED LIST -->
+    <div class="likeList">
+      <h3>❤️ Liked Cars (Click to View Details)</h3>
+      <div id="likedCarsList">No liked cars yet.</div>
+    </div>
+
+    <button class="backBtn" style="max-width:250px;" onclick="showPage('dashboard')">⬅ Back</button>
+  </div>
+</div>
+
+<!-- ==========================
+     NEW: DETAILS MODAL
+========================== -->
+<div class="modalOverlay" id="detailsModal">
+  <div class="modalBox">
+    <div class="modalHeader">
+      <h2 id="modalTitle">Car Details</h2>
+      <button class="closeBtn" onclick="closeDetails()">X</button>
+    </div>
+
+    <div class="modalBody">
+      <div class="modalImage" id="modalImage"></div>
+
+      <div class="modalGrid">
+        <div class="modalCard"><b>Car Company:</b> <span id="dCompany"></span></div>
+        <div class="modalCard"><b>Car Model:</b> <span id="dModel"></span></div>
+
+        <div class="modalCard"><b>Manufacturing Year:</b> <span id="dYear"></span></div>
+        <div class="modalCard"><b>Car Age:</b> <span id="dAge"></span> Years</div>
+
+        <div class="modalCard"><b>KMs Driven:</b> <span id="dKm"></span> KM</div>
+        <div class="modalCard"><b>Fuel Type:</b> <span id="dFuel"></span></div>
+
+        <div class="modalCard"><b>Transmission:</b> <span id="dTrans"></span></div>
+        <div class="modalCard"><b>Color:</b> <span id="dColor"></span></div>
+
+        <div class="modalCard"><b>Registered City:</b> <span id="dCity"></span></div>
+        <div class="modalCard"><b>Vehicle Number:</b> <span id="dNumber"></span></div>
+
+        <div class="modalCard"><b>Registered Owner Name:</b> <span id="dOwner"></span></div>
+        <div class="modalCard"><b>Expected Price:</b> <span id="dPrice"></span></div>
+
+        <div class="modalCard"><b>Challan Count:</b> <span id="dChallan"></span></div>
+        <div class="modalCard"><b>Total Challan Amount:</b> ₹<span id="dChallanAmt"></span></div>
+      </div>
+
+      <div style="margin-top:15px;">
+        <h3 style="margin-bottom:8px;">📄 Available Documents</h3>
+        <div id="docList"></div>
+      </div>
+
+      <div class="uploadBox">
+        <h3>📷 Upload Car Pictures (Buyer Side)</h3>
+        <p style="font-size:13px;color:#555;">Upload images here for verification / additional view.</p>
+        <input type="file" multiple>
+      </div>
+
+      <div class="footerLine">
+        For further queries contact on 7088220011 -- Kuldeep Agrawal
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* PAGE SWITCH */
+function showPage(id) {
+  document.querySelectorAll(".page").forEach(p => p.style.display = "none");
+  document.getElementById(id).style.display = "block";
+
+  if (id === "buyer") {
+    resetFilter();
+    loadCard();
+  }
+}
+showPage("welcome");
+
+/* STATES LIST */
+const states = [
+  "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana",
+  "Himachal Pradesh","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur",
+  "Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana",
+  "Tripura","Uttar Pradesh","Uttarakhand","West Bengal",
+  "Andaman & Nicobar","Chandigarh","Dadra & Nagar Haveli and Daman & Diu","Delhi",
+  "Jammu & Kashmir","Ladakh","Lakshadweep","Puducherry"
+];
+
+states.forEach(s => {
+  let opt = document.createElement("option");
+  opt.text = s;
+  document.getElementById("state").add(opt);
+});
+
+/* PRICE VALIDATION */
+document.getElementById("price").addEventListener("input", e => {
+  if (e.target.value < 0) {
+    alert("Price cannot be negative ❌");
+    e.target.value = "";
+  }
+});
+
+/* IMAGE VALIDATION */
+document.getElementById("images").addEventListener("change", e => {
+  let count = e.target.files.length;
+  if (count < 8 || count > 15) {
+    alert("Upload minimum 8 and maximum 15 images ❌");
+    e.target.value = "";
+    document.getElementById("imgCount").innerText = "0 images selected";
+  } else {
+    document.getElementById("imgCount").innerText = count + " images selected ✅";
+  }
+});
+
+function submitLead() {
+  alert("Lead Submitted Successfully 🎉\nOur team will contact you soon.");
+}
+
+/* ==============================
+   COMPANIES + MODELS DATABASE
+============================== */
+const carDatabase = {
+  "Maruti Suzuki": ["Swift","Baleno","WagonR","Alto","Brezza","Ertiga","Dzire","Ciaz","Grand Vitara","Fronx","Jimny","Ignis"],
+  "Hyundai": ["i10","Grand i10 Nios","i20","Venue","Creta","Verna","Aura","Tucson","Alcazar","Exter"],
+  "Tata": ["Nexon","Punch","Harrier","Safari","Tiago","Tigor","Altroz","Nano"],
+  "Mahindra": ["Thar","Scorpio","Scorpio N","XUV300","XUV700","Bolero","Bolero Neo","XUV400"],
+  "Kia": ["Seltos","Sonet","Carens","EV6"],
+  "Toyota": ["Innova Crysta","Innova Hycross","Fortuner","Glanza","Urban Cruiser Hyryder","Camry"],
+  "Honda": ["City","Amaze","Elevate","WR-V","Jazz"],
+  "Renault": ["Kwid","Triber","Kiger","Duster"],
+  "Nissan": ["Magnite","Kicks"],
+  "Volkswagen": ["Polo","Virtus","Taigun","Vento"],
+  "Skoda": ["Slavia","Kushaq","Octavia","Superb"],
+  "MG": ["Hector","Astor","Gloster","ZS EV","Comet EV"],
+  "Jeep": ["Compass","Meridian"],
+  "BMW": ["X1","X3","X5","3 Series","5 Series","7 Series"],
+  "Audi": ["A4","A6","Q3","Q5","Q7"],
+  "Mercedes": ["A Class","C Class","E Class","S Class","GLA","GLC","GLE","G Wagon"],
+  "Ford": ["EcoSport","Endeavour","Figo","Aspire"],
+  "Isuzu": ["D-Max","MU-X"]
+};
+
+const companySelect = document.getElementById("companySelect");
+const modelSelect = document.getElementById("modelSelect");
+
+Object.keys(carDatabase).forEach(company => {
+  let opt = document.createElement("option");
+  opt.value = company;
+  opt.textContent = company;
+  companySelect.appendChild(opt);
+});
+
+companySelect.addEventListener("change", function(){
+  modelSelect.innerHTML = `<option value="">Select Model</option>`;
+  let company = companySelect.value;
+  if(company && carDatabase[company]){
+    carDatabase[company].forEach(model=>{
+      let opt = document.createElement("option");
+      opt.value = model;
+      opt.textContent = model;
+      modelSelect.appendChild(opt);
+    });
+  }
+});
+
+/* ==============================
+   BUYER SWIPE DATA (Dynamic)
+============================== */
+
+const allCars = [];
+let tempId = 1000;
+
+const sampleCities = ["Delhi","Noida","Gurgaon","Lucknow","Jaipur","Mumbai","Pune","Bhopal","Indore","Chandigarh","Patna","Kolkata"];
+const fuelTypes = ["Petrol","Diesel","CNG","Electric","Hybrid"];
+const transmissions = ["Manual","Automatic"];
+const colors = ["White","Black","Silver","Grey","Red","Blue"];
+const owners = ["Rahul Sharma","Amit Verma","Rohit Singh","Suresh Kumar","Vikram Mehta","Deepak Yadav","Ankit Jain","Pradeep Mishra"];
+
+function randomPick(arr){
+  return arr[Math.floor(Math.random()*arr.length)];
+}
+
+function generateCarsFromDatabase(){
+  Object.keys(carDatabase).forEach(company=>{
+    carDatabase[company].forEach(model=>{
+      let year = Math.floor(Math.random() * (2024 - 2012 + 1)) + 2012;
+      let age = new Date().getFullYear() - year;
+      let km = Math.floor(Math.random()*90000) + 8000;
+      let challanCount = Math.floor(Math.random()*6); // 0-5
+      let challanAmount = challanCount * (Math.floor(Math.random()*1200) + 500);
+
+      allCars.push({
+        name: company + " " + model,
+        city: randomPick(sampleCities),
+        number: "IND" + (tempId++),
+        price: "₹" + (Math.floor(Math.random()*15)+3) + ",00,000",
+        img: "https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=2070",
+        company: company,
+        model: model,
+
+        // NEW EXTRA DETAILS
+        year: year,
+        age: age,
+        km: km,
+        fuel: randomPick(fuelTypes),
+        transmission: randomPick(transmissions),
+        color: randomPick(colors),
+        owner: randomPick(owners),
+        challanCount: challanCount,
+        challanAmount: challanAmount,
+        documents: ["RC Available", "Insurance Available", "PUC Available", "Service History Available"]
+      });
+    });
+  });
+}
+generateCarsFromDatabase();
+
+let cars = [...allCars];
+let currentIndex = 0;
+let likedCars = [];
+
+/* APPLY FILTER */
+function applyFilter(){
+  let company = companySelect.value;
+  let model = modelSelect.value;
+
+  cars = allCars.filter(c=>{
+    if(company && c.company !== company) return false;
+    if(model && c.model !== model) return false;
+    return true;
+  });
+
+  currentIndex = 0;
+  loadCard();
+
+  if(cars.length === 0){
+    alert("No cars found for selected filter ❌");
+  }
+}
+
+/* RESET FILTER */
+function resetFilter(){
+  companySelect.value = "";
+  modelSelect.innerHTML = `<option value="">Select Model</option>`;
+  cars = [...allCars];
+  currentIndex = 0;
+  loadCard();
+}
+
+/* LOAD CARD */
+function loadCard() {
+  const container = document.getElementById("swipeContainer");
+  container.innerHTML = "";
+
+  if (currentIndex >= cars.length) {
+    container.innerHTML = `
+      <div class="card" style="text-align:center;">
+        <h2>No more cars 😄</h2>
+        <p style="margin-top:10px;color:#666;">You have seen all listings.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const car = cars[currentIndex];
+
+  const card = document.createElement("div");
+  card.className = "carCard";
+
+  card.innerHTML = `
+    <div class="car-img" style="background-image:url('${car.img}')"></div>
+    <div class="car-details">
+      <h3>${car.name}</h3>
+      <div class="tag">${car.city}</div>
+      <div class="info"><b>Vehicle No:</b> ${car.number}</div>
+      <div class="info"><b>Expected Price:</b> ${car.price}</div>
+      <div class="info"><b>Status:</b> Verified Listing ✅</div>
+    </div>
+  `;
+
+  container.appendChild(card);
+
+  enableDragSwipe(card);
+}
+
+/* UPDATE LIKED LIST */
+function updateLikedList() {
+  const list = document.getElementById("likedCarsList");
+
+  if (likedCars.length === 0) {
+    list.innerHTML = "No liked cars yet.";
+    return;
+  }
+
+  list.innerHTML = "";
+  likedCars.forEach((c,index) => {
+    list.innerHTML += `<div class="liked-item" onclick="openDetails(${index})"><b>${c.name}</b> (${c.number}) - ${c.price}</div>`;
+  });
+}
+
+/* LIKE */
+function likeCar() {
+  if (currentIndex >= cars.length) return;
+
+  const card = document.querySelector(".carCard");
+  if(!card) return;
+
+  card.style.transform = "translateX(500px) rotate(20deg)";
+
+  likedCars.push(cars[currentIndex]);
+  updateLikedList();
+
+  setTimeout(() => {
+    currentIndex++;
+    loadCard();
+  }, 300);
+}
+
+/* IGNORE */
+function ignoreCar() {
+  if (currentIndex >= cars.length) return;
+
+  const card = document.querySelector(".carCard");
+  if(!card) return;
+
+  card.style.transform = "translateX(-500px) rotate(-20deg)";
+
+  setTimeout(() => {
+    currentIndex++;
+    loadCard();
+  }, 300);
+}
+
+/* DRAG SWIPE */
+function enableDragSwipe(card) {
+  let startX = 0;
+  let moveX = 0;
+  let dragging = false;
+
+  card.addEventListener("mousedown", startDrag);
+  card.addEventListener("touchstart", startDrag);
+
+  function startDrag(e) {
+    dragging = true;
+    startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+  }
+
+  document.addEventListener("mousemove", dragMove);
+  document.addEventListener("touchmove", dragMove);
+
+  function dragMove(e) {
+    if (!dragging) return;
+    moveX = (e.type.includes("touch") ? e.touches[0].clientX : e.clientX) - startX;
+    card.style.transform = `translateX(${moveX}px) rotate(${moveX / 15}deg)`;
+  }
+
+  document.addEventListener("mouseup", endDrag);
+  document.addEventListener("touchend", endDrag);
+
+  function endDrag() {
+    if (!dragging) return;
+    dragging = false;
+
+    if (moveX > 120) {
+      likeCar();
+    } else if (moveX < -120) {
+      ignoreCar();
+    } else {
+      card.style.transform = "translateX(0px) rotate(0deg)";
+    }
+  }
+}
+
+/* KEYBOARD SUPPORT FOR LAPTOP */
+document.addEventListener("keydown", function(e){
+  if(document.getElementById("buyer").style.display === "block"){
+    if(e.key === "ArrowRight") likeCar();
+    if(e.key === "ArrowLeft") ignoreCar();
+  }
+});
+
+/* ==========================
+   NEW: OPEN DETAILS MODAL
+========================== */
+function openDetails(index){
+  let car = likedCars[index];
+
+  document.getElementById("detailsModal").style.display = "flex";
+  document.getElementById("modalTitle").innerText = car.name + " - Full Details";
+  document.getElementById("modalImage").style.backgroundImage = `url('${car.img}')`;
+
+  document.getElementById("dCompany").innerText = car.company;
+  document.getElementById("dModel").innerText = car.model;
+  document.getElementById("dYear").innerText = car.year;
+  document.getElementById("dAge").innerText = car.age;
+  document.getElementById("dKm").innerText = car.km;
+  document.getElementById("dFuel").innerText = car.fuel;
+  document.getElementById("dTrans").innerText = car.transmission;
+  document.getElementById("dColor").innerText = car.color;
+  document.getElementById("dCity").innerText = car.city;
+  document.getElementById("dNumber").innerText = car.number;
+  document.getElementById("dOwner").innerText = car.owner;
+  document.getElementById("dPrice").innerText = car.price;
+  document.getElementById("dChallan").innerText = car.challanCount;
+  document.getElementById("dChallanAmt").innerText = car.challanAmount;
+
+  let docDiv = document.getElementById("docList");
+  docDiv.innerHTML = "";
+  car.documents.forEach(d=>{
+    docDiv.innerHTML += `<span class="docTag">${d}</span>`;
+  });
+}
+
+function closeDetails(){
+  document.getElementById("detailsModal").style.display = "none";
+}
+
+/* Close modal if click outside */
+document.getElementById("detailsModal").addEventListener("click", function(e){
+  if(e.target.id === "detailsModal"){
+    closeDetails();
+  }
+});
+</script>
+
+</body>
+</html>
